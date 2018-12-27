@@ -39,12 +39,14 @@
       <label for='opendivesites'>Dive Sites</label>
       <input id='cjmzfqo7n3q9k2rold991v95b' type='radio' name='rtoggle' value='satellite'>
       <label for='satellite'>Satellite</label>
+      <input id='cjq75wnz0c83g2rnyxv1s6kjs' type='radio' name='rtoggle' value='liveweather'>
+      <label for='satellite'>Live Weather (in progress)</label>
     </div>
 
     <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoib3BlbmRpdmVzaXRlcyIsImEiOiJjamxxc296a2EyanAyM3dvNTZ3dWppbmg2In0.IYOgz_WuabVE0MEQsO_ZAg'; // replace this with your access token
     
-        // Set bounds to CA Coast
+        // Set bounds to West Coast
     //var bounds = [
     //[34.28, -122.18], // Southwest coordinates
     //[40.89, -115.29]  // Northeast coordinates
@@ -55,7 +57,7 @@
       container: 'map',
       style: 'mapbox://styles/opendivesites/cjlzrtjgz3v4x2sn1c0eowqzn?fresh=true',
       center: [-121.93,36.58],
-      zoom: 10,
+      zoom: 8,
       //maxBounds: bounds // Sets bounds as max
     });
       
