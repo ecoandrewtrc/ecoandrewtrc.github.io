@@ -129,7 +129,9 @@
     map.on('mouseleave', 'entries', function () {
         map.getCanvas().style.cursor = '';
     });
- 
+      
+map.addControl(new mapboxgl.FullscreenControl());
+      
 </script>
 </body>
 </html>
