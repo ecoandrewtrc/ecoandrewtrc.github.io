@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+    <script src="https://api4.windy.com/assets/libBoot.js"></script>
+  	<style>
+  		#windy {
+  			width: 80%;
+  			height: 800px;
+  		}
+  	</style>
+  </head>
+  <body>
+    <div id="windy"></div>
+
+    <script>
+
+    const options = {
+
+                // Required: API key
+                key: 'q63swQUbAmpNTVExZYQjVEEKrxByuik3',
+
+                // Put additional console output
+                verbose: true,
+
+                // Optional: Initial state of the map
+                lat: 36.5,
+                lon: -121.9,
+                zoom: 12,
+        }
+
+    // Initialize Windy API
+    windyInit( options, windyAPI => {
+        // windyAPI is ready, and contain 'map', 'store',
+        // 'picker' and other usefull stuff
+
+
+        const { map } = windyAPI      
+        // .map is instance of Leaflet map
+
+        map.baseLayer.options.subdomains = ["mt0", "mt1", "mt2", "mt3"];
+        map.baseLayer.setUrl("https://api.mapbox.com/styles/v1/opendivesites/cjrny9x4y2oxc2srw99ui1vv0/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoib3BlbmRpdmVzaXRlcyIsImEiOiJjamxxc296a2EyanAyM3dvNTZ3dWppbmg2In0.IYOgz_WuabVE0MEQsO_ZAg");
+        map.baseLayer.setOpacity(.50);
+
+  // Remove Windy city labels
+        map.removeLayer(W.labelsLayer);
+        const levels = windyAPI.store.getAllowed('availLevels')
+        console.log('logging stuff adding lots of filler here for visibility')
+        console.log(levels)
+
+
+        console.log("=======Visible products before change=========")
+        windyAPI.store.get('visibleProducts')
+
+        windyAPI.store.set('visibleProducts',['sea'])
+
+        console.log("=======Visible products AFTERs change=========")
+        windyAPI.store.get('visibleProducts')
+
+        console.log("What is the overlay value?????")
+        windyAPI.store.set('overlay', 'waves')
+        console.log(windyAPI.store.get('overlay'))
+    })
+  // L.tileLayer('https://api.mapbox.com/styles/v1/opendivesites/cjrny9x4y2oxc2srw99ui1vv0/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}',
+  // {
+  //   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  //   maxZoom: 18,
+  //   id: 'mapbox.ODS',
+  //   accessToken: 'pk.eyJ1Ijoib3BlbmRpdmVzaXRlcyIsImEiOiJjamxxc296a2EyanAyM3dvNTZ3dWppbmg2In0.IYOgz_WuabVE0MEQsO_ZAg',
+
+    // }).addTo(W.map);
+    
+
+    </script>
+
+  </body>
+</html>
