@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Zaidi CV</title>
+<title>Andrew Middleton</title>
 <link href="styles.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -16,10 +16,10 @@
 <div id="header">
 	<div id="logo"><a href="#"><img src="images/logo.png"></a></div>
 	<ul id="main-menu">
-    	<li><a href="#about">Sur</a></li>
-        <li><a href="#experience">Expérience</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#education">Formations</a></li>
+    	<li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#connect">Contact</a></li>
     </ul>
 </div>
@@ -37,7 +37,7 @@
         <div class="top-divider"></div>
         <div class="content">
         	<img src="images/designer-photo.jpg" />
-          <div class="name">Syed Zeeshan Ali Zaidi</div>
+          <div class="name">Andrew Middleton</div>
           <undername>
               <p>Front &amp; Back-end Web Developer</p>
 </undername>
