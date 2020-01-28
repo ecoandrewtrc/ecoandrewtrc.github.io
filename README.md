@@ -1,6 +1,6 @@
 # ecoandrewtrc.github.io
 This is my personal portfolio.
-![backdrop](backdrop.jpg)
+![backdrop](portfolio/backdrop.jpg)
 
 ## Professional Projects
 
